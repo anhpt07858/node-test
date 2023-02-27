@@ -18,3 +18,17 @@ npm mysql2
 babel để code css trong node js
 muốn code css phải cấu hình
 cache data => REDIS 
+
+upload file 
+AWS - s3 bulk storage lưu len google  rồi lấy link về
+(url) => database
+
+save on server
+database(file) lưu ảnh nguyên file
+ setup npm multer
+
+middleware
+ - đứng giữa req với res
+ -  hợp lệ thì cho gửi về server không hợp lệ thì chặn
+
+ - npm morgan
