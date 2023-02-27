@@ -1,0 +1,20 @@
+
+express frameworks thư viện chính
+
+nodemon giúp js có thể chạy đc lệnh import
+
+Template engines - ejs : có thể cho back end chạy dc html
+
+
+mvc design pattern
+HTTP methods
+- get: lấy thông tin về
+- post: Thêm mới data
+- put
+- delete
+
+ORM node js tương tự query bên spl
+npm mysql2
+babel để code css trong node js
+muốn code css phải cấu hình
+cache data => REDIS 

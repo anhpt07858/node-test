@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body >
+
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/upload" >Upload file</a>
+        
+      </div>
+      
+      <div style="padding-left:16px">
+        <h2>List user:</h2>
+        
+        <table>
+            <tr>
+                <th>id</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Action    </th>
+            </tr>
+            <tbody>
+                <% for(let i=0; i < dataUser.length; i++) { %>
+                    <tr>
+                      <td><%= dataUser[i].id %></td>
+                      <td><%= dataUser[i].firsName %></td>
+                      <td><%= dataUser[i].lastName %></td>
+                      <td><%= dataUser[i].email %></td>
+                      <td><%= dataUser[i].address %></td>
+                      <td>
+                        <a href="/detail/user/<%= dataUser[i].id %>"><button>DETAIL</button></a>
+                        <form action="/edit/user/<%= dataUser[i].id %>" method="GET">
+                            <button type="submit">EDIT</button>
+                        </form>
+                        <a href="/delete/user/<%= dataUser[i].id %>"><button>DELETE</button></a>
+                      </td>
+                    </tr>
+                 <% } %>
+            </tbody>
+            
+          </table>
+      </div>
+      <div style="margin:30px 0 0 500px; width: 300px;">
+        <form action="/create-new-user" method="POST">
+          <label for="fname">First Name</label><br>
+          <input type="text" id="fname" name="firsName" placeholder="Your name.."><br>
+      
+          <label for="lname">Last Name</label><br>
+          <input type="text" id="lname" name="lastName" placeholder="Your last name.."><br>
+      
+          <label for="lname">Email</label><br>
+          <input type="text" id="lname" name="email" placeholder="Your email.."><br>
+        
+          <label for="lname">Address</label><br>
+          <input type="text" id="lname" name="address" placeholder="Your address.."><br>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+</body>
+</html>
